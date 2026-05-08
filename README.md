@@ -37,11 +37,13 @@ Lo sviluppo di EcoTrack ha richiesto focus su architetture pulite e manutenibili
 cd frontend
 npm install
 npm start
-
+```
 
 ### Avvio Backend (Spring Boot)
+```bash
 cd backend
 mvn spring-boot:run
+```
 
 (Assicurati di aver configurato correttamente i parametri di connessione al database nel file application.properties)
 
