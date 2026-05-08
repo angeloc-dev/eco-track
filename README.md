@@ -40,7 +40,6 @@ npm start
 
 
 ### Avvio Backend (Spring Boot)
-```bash
 cd backend
 mvn spring-boot:run
 
