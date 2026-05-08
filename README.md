@@ -47,7 +47,7 @@ mvn spring-boot:run
 (Assicurati di aver configurato correttamente i parametri di connessione al database nel file application.properties)
 
 👨‍💻 Autore
-Angelo Cannella - Full Stack Engineer
+Angelo Cannella - Full Stack Developer
 https://github.com/angeloc-dev/
 
 
