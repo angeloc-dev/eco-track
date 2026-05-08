@@ -1,0 +1,236 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container::-webkit-scrollbar {
+  display: none;
+}
+
+.app-container-center {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container-center::-webkit-scrollbar {
+  display: none;
+}
+
+.app-container-min{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.flex-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  gap: 2rem;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #8b932d;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.btn-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #dd9013;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.btn-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #b53010;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.btn-progress:hover {
+  background: #ffa919;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.btn:hover {
+  background: #a9b43b;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.btn-delete:hover {
+  background: #dd3b13;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.btn-progress:active {
+  background: #b87811;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(0.98);
+}
+
+.btn:active {
+  background: #6d741e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(0.98);
+}
+
+.btn-delete:active {
+  background: #9a290f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(0.98);
+}
+
+.btn-progress:focus {
+  outline: 2px solid #ffa919; /* Bordo per indicare il focus */
+  outline-offset: 3px; /* Offset per separare il bordo dal bottone */
+}
+
+.btn:focus {
+  outline: 2px solid #a9b43b;
+  outline-offset: 3px;
+}
+
+.btn-delete:focus {
+  outline: 2px solid #dd3b13;
+  outline-offset: 3px;
+}
+
+.container {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.container:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.flex-row-end {
+  justify-content: end;
+}
+
+.awards-trophy-name-terminated {
+  color: #8b932d;
+  font-weight: bold;
+}
+
+.badge-name-terminated {
+  color: #8b932d;
+  font-weight: bold;
+}
+
+.background-beginner {
+  background: url("/backgrounds/background1.jpg");
+  background-size: cover;
+}
+
+.background-intermediate {
+  background: url("/backgrounds/background2.jpeg");
+  background-size: cover;
+}
+
+.background-advanced {
+  background: url("/backgrounds/background3.jpg");
+  background-size: cover;
+}
+
+.background-expert{
+  background: url("/backgrounds/background4.jpeg");
+  background-size: cover;
+}
+
+.background-master {
+  background: url("/backgrounds/background5.jpg");
+  background-size: cover;
+}
+
+.themed-div {
+  backdrop-filter: blur(10px); /* Sfocatura dello sfondo dietro */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.theme-beginner {
+  background: rgba(46, 31, 15, 0.8);
+  color: #DCB993;
+}
+
+.theme-intermediate {
+  background: rgba(94, 43, 5, 0.8);
+  color: #FAEDCD;
+}
+
+.theme-advanced {
+  background: rgba(79, 69 ,2, 0.8);
+  color: #FEFAE0;
+}
+
+.theme-expert {
+  background: rgba(56, 61, 20, 0.8);
+  color: #E9EDC9;
+}
+
+.theme-master {
+  background: rgba(48, 53, 28, 0.8);
+  color: #CCD5AE;
+}
+
+@media (max-width: 960px) {
+  .app-container {
+    height: auto;
+    display: flow;
+    transition: 0.2s;
+  }
+
+  .app-container-center {
+    overflow: auto;
+  }
+
+  app-container-center::-webkit-scrollbar {
+    display: none;
+  }
+
+  .themed-div {
+    backdrop-filter: blur(10px); /* Sfocatura dello sfondo dietro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+}

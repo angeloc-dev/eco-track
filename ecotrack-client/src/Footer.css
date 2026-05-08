@@ -1,0 +1,16 @@
+
+footer img.cclicense {
+    height: 25px;
+    margin-left: 10px;
+}
+
+.footer-div .extra {
+    flex: 1;
+}
+
+@media (max-width: 960px) {
+    footer img.cclicense {
+        display: none;
+        transition: 0.2s;
+    }
+}

@@ -1,0 +1,485 @@
+.usergroup-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.usergroup-container-max {
+    height: 100%;
+}
+
+.flex-row-usergroup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.usergroup-left-column {
+    padding: 0 1rem;
+    flex: 1;
+    width: 45%;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 30rem !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.usergroup-left-column::-webkit-scrollbar {
+    display: none;
+}
+
+.usergroup-right-column {
+    width: 53%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 30rem !important;
+    overflow: auto;
+}
+
+.usergroup-right-column::-webkit-scrollbar {
+    display: none;
+}
+
+.user-card {
+    height: 15rem;
+}
+
+.group-card {
+    height: 13.3rem;
+}
+
+.usergroup-card {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.usergroup-cover {
+    margin: 0 auto;
+}
+
+.usergroup-cover-image {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usergroup-cover-image:hover {
+    transform: scale(0.96);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.usergroup-card-first-row {
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+.usergroup-card-second-row {
+    color: white;
+}
+
+.usergroup-card-third-row {
+    font-size: 10pt;
+    color: white;
+}
+
+.usergroup-card-level-xp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+.usergroup-card-level-xp-label {
+    width: 4rem;
+    padding: 0.5rem;
+    background: rgba(255,255,0, 0.4);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255, 0.3);
+}
+
+.usergroup-icon-xp {
+    width: 15px;
+    margin: auto 5px auto 0;
+}
+
+
+.usergroup-awards {
+    max-height: 7rem;
+    min-height: 1.5rem;
+    overflow-y: hidden;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.usergroup-awards-empty{
+    width: 10rem;
+}
+
+.toggle-awards-icon{
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-awards-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.toggle-ranking-icon {
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-ranking-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.usergroup-awards-list {
+    display: none;
+    margin-top: 5px;
+}
+
+.usergroup-awards-list.show{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-height: 5rem;
+    overflow: auto;
+}
+
+.usergroup-awards-list::-webkit-scrollbar {
+    display:none;
+}
+
+.usergroup-award {
+    display: flex;
+    padding: 0.2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 1px solid rgba(255,255, 255, 0.3);
+    color: white;
+    font-size: 9pt;
+    margin: 2px;
+}
+
+.usergroup-trophy-logo {
+    width: 25%;
+    margin: 0 auto;
+}
+
+.usergroup-trophy-logo-image {
+    width: 1rem;
+    margin: 0.3rem;
+}
+
+.usergroup-trophy-content {
+    font-size: 8pt;
+}
+
+.usergroup-badge-name {
+    font-size: 9pt;
+}
+
+.flex-column {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.usergroup-rankings{
+    max-height: 10rem;
+    min-height: 1.5rem;
+    overflow-y: hidden;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.usergroup-ranking{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.usergroup-ranking-empty {
+    width: 2rem;
+}
+
+.usergroup-ranking-title {
+    flex-shrink: 0;
+}
+
+.usergroup-ranking-list {
+    display: none;
+    margin-top: 5px;
+    height: 85%;
+}
+
+.usergroup-ranking-list.show {
+    display: flex;
+    flex-direction: column;
+    max-height: 10rem;
+    overflow: auto;
+
+}
+
+.usergroup-ranking-list::-webkit-scrollbar {
+    display: none;
+}
+
+.usergroup-ranking-logo{
+    width: 20%;
+    flex-shrink: 0;
+}
+
+.usergroup-ranking-logo-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.usergroup-ranking-content{
+    width: 70%;
+    font-size: 8pt;
+}
+
+.usergroup-ranking-name{
+    color: white;
+    font-size: 11pt;
+    flex-shrink: 1;
+    max-height: 1rem;
+    width: 8rem;
+}
+
+.usergroup-ranking-xp{
+    font-size: 10pt;
+    padding: 0.2rem;
+    background: rgba(255,255,0, 0.4);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255, 0.3);
+    flex-shrink: 0;
+}
+
+.usergroup-ranking-level{
+    font-size: 8pt;
+}
+
+.usergroups-resume {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 10px;
+    max-height: 14rem;
+    overflow-y: auto;
+}
+
+.usergroups-resume-full{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 10px;
+    max-height: 27em;
+    overflow-y: auto;
+}
+
+.usergroups-resume::-webkit-scrollbar {
+    display: none;
+}
+
+.usergroups-resume-full::-webkit-scrollbar{
+    display: none;
+}
+
+.usergroup-resume {
+    padding: 0.5rem;
+    background: rgba(0,0,0, 0.3);
+    border: 1px solid rgba(255,255,255, 0.3);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.usergroup-resume-empty {
+    width: 6rem;
+    flex-shrink: 1;
+}
+
+.usergroup-resume-logo{
+    width: 10%;
+    flex-shrink: 0;
+}
+
+.usergroup-resume-content{
+    width: 70%;
+    font-size: 8pt;
+}
+
+.usergroup-resume-level{
+    font-size: 8pt;
+    flex-shrink: 0;
+}
+
+.usergroup-resume-title {
+    font-size: 12pt;
+}
+
+.usergroup-group-type{
+    margin-top:5px;
+}
+
+-usergroup-resume-row-toggle{
+    margin-top: 5px;
+}
+
+.usergroup-resume-userlist {
+    display: none;
+}
+
+.usergroup-resume-userlist.show{
+    display: flex;
+    flex-direction: column;
+    max-height: 7rem;
+    overflow: auto;
+}
+
+.usergroup-resume-userlist::-webkit-scrollbar{
+    display: none;
+}
+
+.btn-add-event {
+    width: 6rem;
+    padding: 0.5rem;
+    background: #8b932d;;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.btn-usergroup-add-event {
+    width: 11rem;
+    padding: 0.3rem;
+    background: #8b932d;;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.event-add {
+    width: 25px;
+    margin: auto 0 auto 5px;
+}
+
+.resume-groups {
+    display: none;
+}
+
+.resume-groups.show{
+    display: unset;
+}
+
+.usergroups-new-groups{
+    display: flex;
+    flex-direction: column;
+    max-height:11rem;
+    overflow: auto;
+}
+
+.usergroups-new-groups::-webkit-scrollbar{
+    display: none;
+}
+
+.usergroup-resume-list-groups::-webkit-scrollbar{
+    display: none;
+}
+
+.usergroup-new-list-groups{
+    display: none;
+}
+
+.usergroup-new-list-groups.show{
+    margin-bottom: 5px;
+    display: unset;
+}
+
+
+.btn-group-add {
+    width: 1.3rem;
+    padding: 0.3rem;
+    background: #8b932d;;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.group-add {
+    width: 25px;
+}
+
+.usergroup-new-group{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+}
+
+@media (max-width: 960px){
+    .usergroup-container{
+        flex-direction: column;
+        height: auto;
+        max-height: 30rem;
+        overflow-y: auto;
+        align-items: center;
+    }
+
+    .usergroup-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .usergroup-left-column{
+        width: 80%;
+        margin-bottom: 10px;
+        max-height: none !important;
+        flex-shrink: 0;
+    }
+
+    .usergroup-card {
+        min-height: 5rem;
+    }
+
+    .usergroup-right-column{
+        width: 80%;
+        max-height: none !important;
+        overflow: unset;
+    }
+}
+
+@media (max-width: 740px){
+    .usergroup-awards-list.show{
+        grid-template-columns: 100%;
+    }
+}

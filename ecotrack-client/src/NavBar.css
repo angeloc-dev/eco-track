@@ -1,0 +1,173 @@
+
+.header-logo {
+    font-family: "DynaPuff", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 35px;
+}
+
+.header-logo-image {
+    width: 10%;
+    margin-top:5px;
+    filter: sepia(80%) saturate(150%) brightness(90%);
+}
+
+.navbar {
+    width: 65%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    flex-shrink: 0;
+}
+
+.nav-item.active {
+    color: white;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius:5px;
+}
+
+.nav-item.active-usergroup {
+    color: white;
+    padding: 0.2rem 1rem;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius:5px;
+}
+
+.nav-user {
+    font-size: 11pt;
+}
+
+.nav-item-user {
+    text-align: center;
+}
+
+.level-navbar {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem;
+    border: 1px solid rgba(255,255, 255, 0.3);
+    font-size: 11pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-item:hover {
+    font-size: 15pt;
+    color: white !important;
+    transition: 0.2s;
+    transform: scale(1.05);
+}
+
+.nav-item:active {
+    font-size: 15pt;
+    color: white !important;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(0.98);
+}
+
+.nav-item:focus {
+    font-size: 15pt;
+    color: white !important;
+    transition: 0.2s;
+    outline: 2px solid #a9b43b; /* Bordo per indicare il focus */
+    outline-offset: 3px; /* Offset per separare il bordo dal bottone */
+}
+
+.navbar-beginner {
+    background: url('/backgrounds/background1.jpg') no-repeat center;
+    background-size: cover; /* Adatta lo sfondo al testo */
+    -webkit-background-clip: text; /* Applica lo sfondo solo al testo */
+    -webkit-text-fill-color: transparent; /* Rende il resto trasparente */
+    mix-blend-mode: normal; /* Assicura che il testo mostri lo sfondo originale */
+}
+
+.navbar-intermediate {
+    background: url("/backgrounds/background2.jpeg") no-repeat;
+    background-size: cover; /* Adatta lo sfondo al testo */
+    -webkit-background-clip: text; /* Applica lo sfondo solo al testo */
+    -webkit-text-fill-color: transparent; /* Rende il resto trasparente */
+    mix-blend-mode: normal; /* Assicura che il testo mostri lo sfondo originale */
+}
+
+
+.navbar-advanced {
+    background: url("/backgrounds/background3.jpg") no-repeat center;
+    background-size: cover; /* Adatta lo sfondo al testo */
+    -webkit-background-clip: text; /* Applica lo sfondo solo al testo */
+    -webkit-text-fill-color: transparent; /* Rende il resto trasparente */
+    mix-blend-mode: normal; /* Assicura che il testo mostri lo sfondo originale */
+}
+
+
+.navbar-expert {
+    background: url("/backgrounds/background4.jpeg") no-repeat center;
+    background-size: cover; /* Adatta lo sfondo al testo */
+    -webkit-background-clip: text; /* Applica lo sfondo solo al testo */
+    -webkit-text-fill-color: transparent; /* Rende il resto trasparente */
+    mix-blend-mode: normal; /* Assicura che il testo mostri lo sfondo originale */
+}
+
+
+.navbar-master {
+    background: url("/backgrounds/background5.jpg") no-repeat bottom;
+    background-size: cover; /* Adatta lo sfondo al testo */
+    -webkit-background-clip: text; /* Applica lo sfondo solo al testo */
+    -webkit-text-fill-color: transparent; /* Rende il resto trasparente */
+    mix-blend-mode: normal; /* Assicura che il testo mostri lo sfondo originale */
+}
+
+@media (max-width: 960px){
+    .navbar {
+        margin-left: -6%;
+        font-size: 10pt;
+        transition: all 0.2s ease;
+    }
+
+    .nav-item:hover {
+        font-size: 12pt;
+        color: white !important;
+        transition: 0.2s;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }
+
+    .nav-item:active {
+        font-size: 12pt;
+        color: white !important;
+        transition: 0.2s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transform: scale(0.98);
+    }
+
+    .nav-item:focus {
+        font-size: 12pt;
+        color: white !important;
+        transition: 0.2s;
+        outline: 2px solid #a9b43b; /* Bordo per indicare il focus */
+        outline-offset: 3px; /* Offset per separare il bordo dal bottone */
+    }
+
+    .nav-item.active {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .nav.active-usergroup{
+        padding: 0.2rem 0.5rem;
+    }
+}

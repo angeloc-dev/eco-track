@@ -1,0 +1,94 @@
+.badge {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-row-expiry-awards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.badge-name {
+    width: 15rem;
+}
+
+.badge-logo-image {
+    width: 50px;
+}
+
+.badge-logo {
+    width: 2.5rem;
+    margin: auto;
+    flex-shrink: 0;
+}
+
+.badge-content {
+    flex-shrink: 0;
+    width: 80%;
+    margin-left: 1rem;
+    font-size: 11pt;
+}
+
+.badge-description {
+    font-size: 10pt;
+    color: white;
+}
+
+.badge-targetcount {
+    flex-shrink: 0;
+}
+
+.badge-xp {
+    flex-shrink: 0;
+    width: 3rem;
+}
+
+.awards-badge-min-level {
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.awards-badge-xp {
+    width: 4rem;
+}
+
+
+.award-terminated {
+    color: white;
+    background: #8b932d;
+    padding: 0.2rem;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+}
+
+.award-progress {
+    color: white;
+    background: #dd9013;
+    padding: 0.2rem;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media (max-width: 960px){
+    .badge {
+        max-height: 3rem;
+        justify-content: space-between;
+    }
+    .badge-logo {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .badge-content {
+        width: 90%;
+    }
+}
+

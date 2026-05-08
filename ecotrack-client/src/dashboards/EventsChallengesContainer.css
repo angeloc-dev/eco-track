@@ -1,0 +1,544 @@
+.events-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.events-left-column {
+    padding: 1rem;
+    flex: 1;
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    max-height: 25rem !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.max-container {
+    height: 100%;
+    max-height: 31rem !important;
+}
+
+.events-left-column::-webkit-scrollbar {
+    display: none;
+}
+
+
+.filter-events {
+    max-height: 25rem;
+}
+
+.label-filter {
+    width: 7rem;
+    flex-shrink: 0;
+}
+
+.search-input {
+    width: 60%;
+    padding: 5px;
+    border: 2px solid #5a5a5a;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #8b932d;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.events-radio input[type="radio"] {
+    display: none; /* Nasconde il radio button originale */
+}
+
+.events-radio .radio-label {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid #5a5a5a;
+    margin-right: 5px;
+    border-radius: 50%; /* Forma circolare */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-select {
+    appearance: none; /* Rimuove lo stile predefinito del browser */
+    width: 10rem;
+    padding: 10px;
+    border: 2px solid #5a5a5a;
+    border-radius: 5px;
+    background: white url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path fill="%235a5a5a" d="M0 0l5 6 5-6z"/></svg>') no-repeat right 10px center;
+    background-size: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none; /* Nasconde il checkbox originale */
+}
+
+.custom-checkbox .checkbox-label {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5a5a5a;
+    border-radius: 4px; /* Forma quadrata, cambia a 50% per cerchio */
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-label {
+    background-color: #8b932d; /* Colore di sfondo */
+    border-color: #8b932d; /* Cambia il colore del bordo */
+}
+
+.custom-checkbox .checkbox-label::after {
+    content: '✔'; /* Simbolo check */
+    color: white;
+    font-size: 14px; /* Dimensione del simbolo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Nasconde inizialmente il simbolo */
+    transition: transform 0.3s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-label::after {
+    transform: translate(-50%, -50%) scale(1); /* Mostra il simbolo */
+}
+
+
+.category-select:focus {
+    border-color: #8b932d;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.events-radio input[type="radio"]:checked + .radio-label {
+    background-color: #8b932d; /* Colore di sfondo */
+    border-color: #8b932d;
+}
+
+.events-radio .radio-label::after {
+    content: '';
+    width: 7.5px;
+    height: 7.5px;
+    background-color: white;
+    border-radius: 50%; /* Cerchio interno */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.events-radio input[type="radio"]:checked + .radio-label::after {
+    transform: translate(-50%, -50%) scale(1); /* Mostra il cerchio */
+}
+
+.events-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 8px;
+    font-size: 12pt;
+}
+
+.first-row-event{
+    gap: 1rem;
+}
+
+.event-empty {
+    width: 25%;
+}
+
+.event-terminated {
+    color: white;
+    background: #8b932d;
+    padding: 0.2rem;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+}
+
+.event-ongoing{
+    color: white;
+    background: #dd9013;
+    padding: 0.2rem;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+}
+
+.event-place {
+    margin-left: 20%;
+    font-size: 11pt;
+    flex-shrink: 0;
+}
+
+.event-icon-place{
+    width: 20px;
+}
+
+.event-organizer{
+    width: 15rem;
+}
+
+.event-type-organizer {
+    width: 20px;
+}
+
+.event-date {
+    font-size: 11pt;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.event-name {
+    font-weight: bold;
+    color: white;
+}
+
+.event-category {
+    font-size: 10pt;
+    color: white;
+    width: 15rem;
+    flex-shrink: 0;
+}
+
+.event-xp {
+    font-size: 12pt;
+    flex-shrink: 0;
+}
+
+.event-icon-xp {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.toggle-description-icon {
+    width: 3%;
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Transizione per la rotazione */
+}
+
+.toggle-description-icon.rotate {
+    transform: rotate(180deg); /* Rotazione di 180° */
+}
+
+.event-description {
+    color: white;
+}
+
+.event-description {
+    color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.1s ease-in-out;
+}
+
+.event-description.show {
+    max-height: 200px;
+    margin-bottom: 5px;
+    font-size: 10pt;
+}
+
+.event-activity-list {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.event-activity-carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    gap: 20px;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
+    -ms-overflow-style: none; /* Nasconde la scrollbar su IE e Edge */
+}
+
+.events-activity-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.event-activity-card {
+    flex: 0 0 11rem; /* Larghezza iniziale della card */
+    max-height: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-open {
+    max-height: none;
+    flex: 0 0 15rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.activity-name {
+    font-size: 10pt;
+    flex-shrink: 0;
+    max-width: 10rem;
+}
+
+.activity-description {
+    color: white;
+    font-size: 10pt;
+}
+
+.activity-date{
+    font-size: 9pt;
+}
+
+.toggle-activity-icon {
+    width: 8px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-activity-icon.rotate {
+    transform: rotate(180deg);
+    margin-left: 3rem;
+}
+
+.activity-icon-xp {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.activity-title {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.activity-deadline {
+    font-size: 11pt;
+    color: white;
+}
+
+.btn-participate-activity {
+    width: 6rem;
+    padding: 0.5rem;
+}
+
+.btn-delete-activity {
+    width: 9rem;
+    padding: 0.5rem;
+}
+
+.btn-delete-participation-activity{
+    width: 9.3rem;
+    padding: 0.5rem;
+}
+
+.btn-event-add-activity {
+    width: 8.5rem;
+    padding: 0.5rem;
+}
+
+.btn-add-activity {
+    padding: 0.5rem 1rem;
+    max-height: 2rem;
+    margin: 0.3rem;
+}
+
+.activity-add {
+    display: block;
+    width: 35px;
+    margin: 0 auto;
+}
+
+.event-image {
+    width: 88%;
+    max-height: 300px;
+    margin: 10px auto 5px;
+    flex-shrink: 1;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-participate-event {
+    width: 7rem;
+    padding: 0.5rem;
+}
+
+.btn-remove-participation-event{
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+.challenge-name {
+    width: 20rem;
+}
+
+.challenge-targetcount {
+    background: rgba(255, 255, 0, 0.2);
+    padding: 0.5rem;
+    width: 15%;
+    font-size: 11pt;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.challenge-targetcount-not-started {
+    padding: 0.5rem;
+    font-size: 11pt;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+
+.challenge-targetcount-terminated {
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 15%;
+    font-size: 11pt;
+    text-align: center;
+    color: #8b932d;
+    flex-shrink: 0;
+}
+
+.challenge-difficulty{
+    flex-shrink: 0;
+}
+
+.challenge-difficulty-icon {
+    width: 15px;
+}
+
+.challenge-empty {
+    width: 35%;
+}
+
+.btn-participate-challenge {
+    width: 7rem;
+    padding: 0.3rem;
+}
+
+.btn-progress-challenge {
+    width: 6rem;
+    padding: 0.3rem;
+    margin-left: 5px;
+}
+
+.btn-remove-challenge {
+    width: 4.5rem;
+    padding: 0.3rem;
+}
+
+.user-of-challenge {
+    width: 12rem;
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+}
+
+.avatar-stack {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.challenge-awarder-photo {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: -1rem; /* Sovrapposizione */
+}
+
+.challenge-awarder-photo:first-child {
+    margin-left: 0;
+}
+
+.remaining-users {
+    font-size: 11pt;
+}
+
+.events-right-column {
+    width: 30%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 25rem !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.expiring-trophies-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 15rem;
+    overflow-y: scroll;
+    gap: 10px;
+}
+
+.expiring-badge-list{
+    display: flex;
+    flex-direction: column;
+    max-height: 26rem;
+    overflow-y: scroll;
+    gap: 10px;
+}
+
+.expiring-trophies-list::-webkit-scrollbar {
+    display: none;
+}
+
+.expiring-badge-list::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .events-left-column {
+        width: auto;
+        transition: 0.2s;
+        max-height: 25rem !important;
+    }
+
+    .events-right-column {
+        width: auto;
+        transition: 0.2s;
+        max-height: 25rem !important;
+    }
+
+    .max-container {
+        max-height: 31rem !important;
+    }
+
+    .events-container {
+        display: flow-root;
+        transition: 0.2s;
+    }
+}

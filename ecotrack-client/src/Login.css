@@ -1,0 +1,67 @@
+.log-container {
+    margin: auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.label-custom {
+    width: 3rem;
+}
+
+.login-input {
+    width: 11rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.events-checkbox input[type="checkbox"] {
+    display: none; /* Nasconde il checkbox originale */
+}
+
+.events-checkbox .checkbox-label {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5a5a5a;
+    margin-right: 5px;
+    border-radius: 4px; /* Forma quadrata */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.events-checkbox input[type="checkbox"]:checked + .checkbox-label {
+    background-color: #8b932d; /* Colore di sfondo */
+    border-color: #8b932d;
+}
+
+.events-checkbox .checkbox-label::after {
+    content: '✔'; /* Simbolo check */
+    color: white;
+    position: absolute;
+    margin: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.events-checkbox input[type="checkbox"]:checked + .checkbox-label::after {
+    transform: translate(-50%, -50%) scale(1); /* Mostra il simbolo */
+}
+
+.actions {
+    width: 7rem;
+    padding: 0.5rem;
+    background: #8b932d;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
